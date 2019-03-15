@@ -24,10 +24,7 @@ $(call inherit-product, device/huawei/mha/device.mk)
 # Inherit some common Lineage stuff.
 $(call inherit-product, vendor/rr/config/common_full_phone.mk)
 
-# Inherit gapps
-#$(call inherit-product, vendor/gapps/device-vendor.mk)
-$(call inherit-product, device/huawei/mha/gapps.mk)
-
+# Inherit Hwcamera
 $(call inherit-product, device/huawei/mha/hwcamera.mk)
 
 # Device identifier. This must come after all inclusions
