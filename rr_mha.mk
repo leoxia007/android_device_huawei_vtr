@@ -14,6 +14,10 @@
 # limitations under the License.
 #
 
+# NFC config
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/nfc/libnfc-nci.conf:system/etc/libnfc-nci.conf
+
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
@@ -24,6 +28,9 @@ $(call inherit-product, device/huawei/mha/device.mk)
 # Inherit some common Lineage stuff.
 $(call inherit-product, vendor/rr/config/common_full_phone.mk)
 
+# Inherit gapps
+#$(call inherit-product, device/huawei/mha/gapps.mk)
+
 # Inherit Hwcamera
 $(call inherit-product, device/huawei/mha/hwcamera.mk)
 
@@ -33,3 +40,5 @@ PRODUCT_NAME := rr_mha
 PRODUCT_BRAND := Huawei
 PRODUCT_MODEL := Huawei Mate 9
 PRODUCT_MANUFACTURER := Huawei
+
+WITHOUT_CHECK_API := true
