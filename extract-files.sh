@@ -18,7 +18,7 @@
 set -e
 
 # Required!
-export DEVICE=mha
+export DEVICE=vtr
 export DEVICE_COMMON=hi3660-common
 export VENDOR=huawei
 

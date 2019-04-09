@@ -17,11 +17,11 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_o.mk)
 
 # call the proprietary setup
-$(call inherit-product-if-exists, vendor/huawei/mha/mha-vendor.mk)
+$(call inherit-product-if-exists, vendor/huawei/vtr/vtr-vendor.mk)
 
 PRODUCT_AAPT_CONFIG := normal
-PRODUCT_AAPT_PREF_CONFIG := xhdpi
-PRODUCT_AAPT_PREBUILT_DPI := xhdpi hdpi
+PRODUCT_AAPT_PREF_CONFIG := xxhdpi
+PRODUCT_AAPT_PREBUILT_DPI := xxhdpi xhdpi hdpi
 
 # Local overlays
 DEVICE_PACKAGE_OVERLAYS += \
@@ -29,8 +29,13 @@ DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay-lineage
 
 # Boot animation
-TARGET_SCREEN_HEIGHT := 1920
+TARGET_SCREEN_HEIGHT := 2160
 TARGET_SCREEN_WIDTH := 1080
+
+#Display
+PRODUCT_PROPERTY_OVERRIDES += \
+    debug.sf.hw=1 \
+    debug.sf.disable_hwcomposer=true
 
 # Inherit from hi3660-common
 $(call inherit-product, device/huawei/hi3660-common/hi3660.mk)

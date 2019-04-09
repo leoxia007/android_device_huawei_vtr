@@ -16,7 +16,7 @@
 # inherit from common hi3660-common
 -include device/huawei/hi3660-common/BoardConfigCommon.mk
 
-DEVICE_PATH := device/huawei/mha
+DEVICE_PATH := device/huawei/vtr
 
 # Assert
-TARGET_OTA_ASSERT_DEVICE := mha,hi3660
+TARGET_OTA_ASSERT_DEVICE := vtr,hi3660
