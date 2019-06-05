@@ -32,6 +32,10 @@ DEVICE_PACKAGE_OVERLAYS += \
 TARGET_SCREEN_HEIGHT := 2160
 TARGET_SCREEN_WIDTH := 1080
 
+# Device init scripts
+PRODUCT_PACKAGES += \
+    init.aptouch.rc
+
 #Display
 PRODUCT_PROPERTY_OVERRIDES += \
     debug.sf.hw=1 \
